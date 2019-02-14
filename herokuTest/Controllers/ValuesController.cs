@@ -20,7 +20,7 @@ namespace herokuTest.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return "asd";
         }
 
         // POST api/values
