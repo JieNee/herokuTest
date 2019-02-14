@@ -13,7 +13,7 @@ namespace herokuTest.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "csda", "b" };
+            return new string[] { "ca", "b" };
         }
 
         // GET api/values/5
