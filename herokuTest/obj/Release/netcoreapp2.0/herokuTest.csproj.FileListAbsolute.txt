@@ -1,0 +1,11 @@
+D:\herokuTest\herokuTest\bin\Release\netcoreapp2.0\herokuTest.deps.json
+D:\herokuTest\herokuTest\bin\Release\netcoreapp2.0\herokuTest.runtimeconfig.json
+D:\herokuTest\herokuTest\bin\Release\netcoreapp2.0\herokuTest.runtimeconfig.dev.json
+D:\herokuTest\herokuTest\bin\Release\netcoreapp2.0\herokuTest.dll
+D:\herokuTest\herokuTest\bin\Release\netcoreapp2.0\herokuTest.pdb
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.csprojAssemblyReference.cache
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.csproj.CoreCompileInputs.cache
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.AssemblyInfoInputs.cache
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.AssemblyInfo.cs
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.dll
+D:\herokuTest\herokuTest\obj\Release\netcoreapp2.0\herokuTest.pdb

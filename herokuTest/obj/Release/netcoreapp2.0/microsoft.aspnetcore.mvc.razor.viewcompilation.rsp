@@ -1,0 +1,5 @@
+D:\herokuTest\herokuTest
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=herokuTest
+--content-root=D:\herokuTest\herokuTest
+--file=
