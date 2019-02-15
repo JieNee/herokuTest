@@ -27,6 +27,13 @@ namespace herokuTest.Controllers
         {
             return Ok();
         }
+
+        [Route("api/Test2")]
+        [HttpPost]
+        public ActionResult asd()
+        {
+            return Ok("good");
+        }
     }
 
     public class asho
