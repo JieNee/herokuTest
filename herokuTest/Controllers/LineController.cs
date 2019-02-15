@@ -25,16 +25,16 @@ namespace herokuTest.Controllers
 
         [Route("api/Test")]
         [HttpPost]
-        public ActionResult qwe()
+        public string  qwe()
         {
-            return Ok();
+            return "asd";
         }
 
         [Route("api/Test2")]
         [HttpGet]
-        public ActionResult asd()
+        public LineMessage asd([FromBody] LineMessage x = null)
         {
-            return View();
+            return x;
         }
     }
 
