@@ -21,7 +21,12 @@ namespace herokuTest.Controllers
         }
 
 
-
+        [Route("api/Test")]
+        [HttpPost]
+        public ActionResult qwe()
+        {
+            return Ok();
+        }
     }
 
     public class asho
