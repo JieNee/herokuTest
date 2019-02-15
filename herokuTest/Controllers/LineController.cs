@@ -11,12 +11,16 @@ namespace herokuTest.Controllers
     
     public class LineController : Controller
     {
+        
+
         [Route("api/Line")]
         [HttpPost]
-        public string qwe([FromBody]asho x=null)
+        public ActionResult qwe(asho x)
         {
-            return x != null ? x.ID : "OK";
+            return x != null ? Ok(x.ID) : Ok("good");
         }
+
+
 
     }
 
