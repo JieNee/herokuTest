@@ -3,9 +3,9 @@ D:\herokuTest\herokuTest\bin\Debug\netcoreapp2.0\herokuTest.runtimeconfig.json
 D:\herokuTest\herokuTest\bin\Debug\netcoreapp2.0\herokuTest.runtimeconfig.dev.json
 D:\herokuTest\herokuTest\bin\Debug\netcoreapp2.0\herokuTest.dll
 D:\herokuTest\herokuTest\bin\Debug\netcoreapp2.0\herokuTest.pdb
-D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.csprojResolveAssemblyReference.cache
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.csproj.CoreCompileInputs.cache
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.AssemblyInfoInputs.cache
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.AssemblyInfo.cs
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.dll
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.pdb
+D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.csprojAssemblyReference.cache
