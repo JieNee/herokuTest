@@ -17,7 +17,9 @@ namespace herokuTest.Controllers
         [HttpPost]
         public ActionResult qwe([FromBody] LineMessage x = null)
         {
-            return Ok("good");
+            if (x == null) return BadRequest();
+            
+            return Ok(x);
         }
 
 
