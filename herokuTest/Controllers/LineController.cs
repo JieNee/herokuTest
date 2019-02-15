@@ -15,9 +15,9 @@ namespace herokuTest.Controllers
 
         [Route("api/Line")]
         [HttpPost]
-        public ActionResult qwe([FromBody] asho x = null)
+        public ActionResult qwe([FromBody] LineMessage x = null)
         {
-            return x != null ? Ok(x.ID) : Ok("good");
+            return Ok("good");
         }
 
 
@@ -39,5 +39,26 @@ namespace herokuTest.Controllers
     public class asho
     {
         public string ID { get; set; }
+    }
+
+    public class LineMessage
+    {
+        public string replyToken { get; set; }
+        public string type { get; set; }
+        public string timestamp { get; set; }
+        public source source { get; set; }
+        public message message { get; set; }
+    }
+
+    public class source
+    {
+        public string type { get; set; }
+        public string userId { get; set; }
+    }
+    public class message
+    {
+        public string id { get; set; }
+        public string type { get; set; }
+        public string text { get; set; }
     }
 }
