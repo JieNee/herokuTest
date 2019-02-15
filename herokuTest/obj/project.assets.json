@@ -42,6 +42,15 @@
           }
         }
       },
+      "LineBotSDK/0.9.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LineBot.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LineBot.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -5048,6 +5057,19 @@
         "runtimes/win-arm/native/libuv.dll",
         "runtimes/win-x64/native/libuv.dll",
         "runtimes/win-x86/native/libuv.dll"
+      ]
+    },
+    "LineBotSDK/0.9.3": {
+      "sha512": "Pmq35Od+Re1H3G9ckDl4YswFHyNmZInSWTY4Y8SYDGRaPGM8uw/7w4K2HhVHFIfvybye9WjS/aUPcaVwqBKtow==",
+      "type": "package",
+      "path": "linebotsdk/0.9.3",
+      "files": [
+        ".signature.p7s",
+        "Readme.txt",
+        "lib/net45/LineBot.XML",
+        "lib/net45/LineBot.dll",
+        "linebotsdk.0.9.3.nupkg.sha512",
+        "linebotsdk.nuspec"
       ]
     },
     "Microsoft.ApplicationInsights/2.4.0": {
@@ -13246,6 +13268,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "LineBotSDK >= 0.9.3",
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.2"
@@ -13296,6 +13319,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "LineBotSDK": {
+            "target": "Package",
+            "version": "[0.9.3, )"
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.8, )"
@@ -13317,5 +13344,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用 '.NETFramework,Version=v4.6.1' 而非專案目標架構 '.NETCoreApp,Version=v2.0' 還原了套件 'LineBotSDK 0.9.3'。此套件與您的專案並非完全相容。",
+      "libraryId": "LineBotSDK",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
