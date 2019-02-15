@@ -8,4 +8,4 @@ D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.AssemblyInfoInputs.c
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.AssemblyInfo.cs
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.dll
 D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.pdb
-D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.csprojAssemblyReference.cache
+D:\herokuTest\herokuTest\obj\Debug\netcoreapp2.0\herokuTest.csprojResolveAssemblyReference.cache
