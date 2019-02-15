@@ -29,10 +29,10 @@ namespace herokuTest.Controllers
         }
 
         [Route("api/Test2")]
-        [HttpPost]
+        [HttpGet]
         public ActionResult asd()
         {
-            return Ok("good");
+            return View();
         }
     }
 
