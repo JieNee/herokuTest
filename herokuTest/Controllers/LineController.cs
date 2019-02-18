@@ -25,7 +25,7 @@ namespace herokuTest.Controllers
             {
                 try
                 {
-                    LineReply(x.events[0].replyToken);
+                    LineReply(x);
                     return Ok(x);
                 }
                 catch(Exception ex)
@@ -57,18 +57,18 @@ namespace herokuTest.Controllers
             
         }
 
-        public void LineReply(string replyToken)
+        public void LineReply(LineMessage x)
         {
             string ApiUrl = "https://api.line.me/v2/bot/message/reply";
             string AccessToken = "PQ8Lm5Wj/R1dD3KO4crlrEfeKN7axCE51n+1Ww61gT2YxxhmvFCkb3GxxlNU8pAth2vWYdkqg6y3OF6YUJJUerEktH+BGA/1DD0tcEFI5heQWLQx1SjUBDDpaAB2AOI9Yp5RsbptVn9fKFcGOX0OrAdB04t89/1O/w1cDnyilFU=";
 
             string strData = @"
                {
-                    ""replyToken"":"""+ replyToken + @""",
+                    ""replyToken"":"""+ x.events[0].replyToken + @""",
                     ""messages"":[
                         {
                             ""type"":""text"",
-                            ""text"":""Hello, user""
+                            ""text"":""你說了:"+ x.events[0].message.text+ @"""
                         }
                     ]
                 }
@@ -127,8 +127,9 @@ namespace herokuTest.Controllers
 
     public class LineMessage
     {
-        public List<events> events;
-    }
+        public string destination { get; set; }
+        public List<events> events { get; set; }
+}
 
     public class events
     {
