@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using herokuTest.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,7 @@ namespace herokuTest.Controllers
 
         [Route("api/Line")]
         [HttpPost]
-        public ActionResult qwe([FromBody] LineMessage x = null)
+        public ActionResult qwe([FromBody] LineWebhookModels x = null)
         {
             if (x == null) return BadRequest();
             else
@@ -35,32 +36,12 @@ namespace herokuTest.Controllers
             }          
         }
 
-
-        [Route("api/Test")]
-        [HttpPost]
-        public string  qwe()
-        {
-            return "asd";
-        }
-
-        [Route("api/Test2")]
-        [HttpGet]
-        public LineMessage asd([FromBody] LineMessage x = null)
-        {
-            return x;
-        }
-
-        [Route("api/Test3")]
-        [HttpPost]
-        public void qwe2()
-        {
-            
-        }
-
-        public void LineReply(LineMessage x)
+        public void LineReply(LineWebhookModels x)
         {
             string ApiUrl = "https://api.line.me/v2/bot/message/reply";
             string AccessToken = "PQ8Lm5Wj/R1dD3KO4crlrEfeKN7axCE51n+1Ww61gT2YxxhmvFCkb3GxxlNU8pAth2vWYdkqg6y3OF6YUJJUerEktH+BGA/1DD0tcEFI5heQWLQx1SjUBDDpaAB2AOI9Yp5RsbptVn9fKFcGOX0OrAdB04t89/1O/w1cDnyilFU=";
+            string replyText = "你媽的".IndexOf(x.events[0].message.text) > -1 ? "別說髒話" : "你說了:" + x.events[0].message.text;
+
 
             string strData = @"
                {
@@ -68,7 +49,7 @@ namespace herokuTest.Controllers
                     ""messages"":[
                         {
                             ""type"":""text"",
-                            ""text"":""你說了:"+ x.events[0].message.text+ @"""
+                            ""text"":"""+ replyText + @"""
                         }
                     ]
                 }
@@ -120,35 +101,5 @@ namespace herokuTest.Controllers
         }
     }
 
-    public class asho
-    {
-        public string ID { get; set; }
-    }
-
-    public class LineMessage
-    {
-        public string destination { get; set; }
-        public List<events> events { get; set; }
-}
-
-    public class events
-    {
-        public string replyToken { get; set; }
-        public string type { get; set; }
-        public string timestamp { get; set; }
-        public source source { get; set; }
-        public message message { get; set; }
-    }
-
-    public class source
-    {
-        public string type { get; set; }
-        public string userId { get; set; }
-    }
-    public class message
-    {
-        public string id { get; set; }
-        public string type { get; set; }
-        public string text { get; set; }
-    }
+    
 }
