@@ -64,7 +64,7 @@ namespace herokuTest.Controllers
 
             string strData = @"
                {
-                    ""replyToken"":"+ replyToken + @",
+                    ""replyToken"":"""+ replyToken + @""",
                     ""messages"":[
                         {
                             ""type"":""text"",
