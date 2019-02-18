@@ -23,10 +23,16 @@ namespace herokuTest.Controllers
             if (x == null) return BadRequest();
             else
             {
-                LineReply(x.replyToken);
+                try
+                {
+                    LineReply(x.events[0].replyToken);
+                }catch(Exception ex)
+                {
+
+                }
+               
                 return Ok(x);
-            }
-            
+            }          
             
         }
 
@@ -115,6 +121,11 @@ namespace herokuTest.Controllers
     }
 
     public class LineMessage
+    {
+        public List<events> events;
+    }
+
+    public class events
     {
         public string replyToken { get; set; }
         public string type { get; set; }
