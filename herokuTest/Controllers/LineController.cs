@@ -26,14 +26,13 @@ namespace herokuTest.Controllers
                 try
                 {
                     LineReply(x.events[0].replyToken);
-                }catch(Exception ex)
-                {
-
+                    return Ok(x);
                 }
-               
-                return Ok(x);
+                catch(Exception ex)
+                {
+                    return BadRequest(ex);
+                }
             }          
-            
         }
 
 
@@ -51,6 +50,12 @@ namespace herokuTest.Controllers
             return x;
         }
 
+        [Route("api/Test3")]
+        [HttpPost]
+        public void qwe2()
+        {
+            
+        }
 
         public void LineReply(string replyToken)
         {
